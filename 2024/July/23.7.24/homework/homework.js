@@ -152,11 +152,101 @@ return `${real}.${real_1}`
 
 
 
-/////////////////////////////////////////////////////// task 10
+// /////////////////////////////////////////////////////// task 10
+// function maskEmail(email){
+//     let splitEmail = email.split('@')
+//      splitEmail[0] =  "*****"
+//     let maskedEmail = splitEmail.join("@")
+//     console.log(maskedEmail);
+//     return maskedEmail
+// }
+// let trueMaskedEmail = maskEmail("whatever@gmail.com")
+// console.log(trueMaskedEmail);
+///////////////////////////////////////////////////i used dirty cheats to get this answer.
+
+
+// function maskEmail(email) {
+// let unoMail = email.index("@")
+// let treMail = "*******"
+// let quaMail = 
+// } console.log(maskEmail("itay945@yahoo.com"))
+/////////////////////everywhere i am looking makes me use an array, i could keep trying to find how to complete it. i find it anoynn
 
 
 
 
-function maskEmail(email) {
-    
+
+
+//////////////////////////////////////////////////// task 11
+
+
+
+function gradeCalculator(score) {
+    if (score >= 90) return "A"
+    else if (score >= 80) return "B"
+    else if (score >= 70) return "C"
+    else if (score >= 60) return "D"
+    else return "F"
+} console.log(gradeCalculator(500))
+
+
+
+////////////////////////////////////////////////// task 12
+
+
+
+function canVote(age, isCitizen) {
+    if (age >= 18 && isCitizen === true) return "You are eligible to vote."
+    else return "You are not eligible to vote" 
+} console.log(canVote(66666, true))
+
+
+
+
+/////////////////////////////////////////////////// task 13
+
+
+
+function convertToUpperCaseAndAddAge(name, age) {
+    let cName = name.toUpperCase()
+    let tAge = age.toString()
+    let tName = `${cName}${tAge}`
+    return `${tName}` ////// why do i need to return?
 }
+
+ console.log(convertToUpperCaseAndAddAge("itay", 24))
+
+
+
+
+
+
+/////////////////////////////////////////////////////// task 14
+
+
+
+function capitalize(word) {
+    let aWord = word.charAt(0)
+    let abWord = aWord.toUpperCase()
+    let bWord = word.substring(1)
+    let cWord = `${abWord}${bWord}`
+    return `${cWord}` ////////////////why did i need to use the `$ at this part?
+} console.log(capitalize("bigadon"))
+
+
+
+/////////////////////////////////////////////////////// task 15
+
+
+
+
+
+function containsSubstring(mainString, subString) {
+    let main = mainString.includes(subString)
+    if (main === true) return "true"
+    else return "false"
+}console.log(containsSubstring("main", "sub"))
+/////////////////////////////////// unsure i understood the meaning here, what does mainString means? as in a name? 
+
+
+
