@@ -54,7 +54,7 @@ switch (day) {
         console.log("Today is Friday");
         break;
         case "Saturday":
-        console.log("Today is shabes");
+        console.log("Today is Shabes");
         break;
         case "Sunday":
         console.log("Today is Sunday");
@@ -170,7 +170,7 @@ return `${real}.${real_1}`
 // let treMail = "*******"
 // let quaMail = 
 // } console.log(maskEmail("itay945@yahoo.com"))
-/////////////////////everywhere i am looking makes me use an array, i could keep trying to find how to complete it. i find it anoynn
+///////////////////// to early for an array.
 
 
 
@@ -246,7 +246,6 @@ function containsSubstring(mainString, subString) {
     if (main === true) return "true"
     else return "false"
 }console.log(containsSubstring("main", "sub"))
-/////////////////////////////////// unsure i understood the meaning here, what does mainString means? as in a name? 
 
 
 
