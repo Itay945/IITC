@@ -225,3 +225,36 @@ for (i = emptyArray_1.length; i > 0; i--){
 }
 // weird one
 //////////////////// 26 - 30 Array Methods: unshift() and shift()
+
+fruits.unshift("mango")
+console.log(fruits);
+
+let firstElement_1 = numbers.shift()
+console.log(firstElement_1);
+
+numbers.push("5","60","70")
+console.log(numbers);
+
+let arye = []
+
+for (i = 5; i >= 1 ; i--){
+    arye.unshift(i)
+    console.log(arye);
+} 
+  console.log(arye);
+
+  // chat gpt gives me another similar question
+
+  let empt = []
+
+    for (i = 7; i > 3;i--){
+        empt.unshift(i)
+  console.log(empt);
+}
+
+let emp = ["icecream","dragon","fruit"]
+
+for (i = 0; emp.length > 0 ;i++){
+   let removedElement_2 = emp.shift(i)
+console.log(removedElement_2);
+}console.log(emp);
