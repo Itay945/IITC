@@ -103,3 +103,28 @@ for (let j = 0; j < array[i].length; j++ ){
 }
 }
   searchInArray(arr, 9)
+
+
+
+  //// Exercise 4: Count Vowels and Consonants
+
+function checkVowels(string){
+    let vowels = "aeiouAEIOU"
+    let count = 0
+    for (let i = 0; i < string.length; i++){
+        for (let j = 0; j < vowels.length; j++){
+          if  (string[i] === vowels[j])
+            count++
+            
+            
+        }console.log(count);
+    }
+  }
+
+
+
+
+    checkVowels("itay")
+    
+
+    ///

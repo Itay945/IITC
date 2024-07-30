@@ -258,3 +258,5 @@ for (i = 0; emp.length > 0 ;i++){
    let removedElement_2 = emp.shift(i)
 console.log(removedElement_2);
 }console.log(emp);
+
+//////Array Methods: indexOf() and lastIndexOf()
