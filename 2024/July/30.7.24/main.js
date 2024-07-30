@@ -127,4 +127,35 @@ function checkVowels(string){
     checkVowels("itay")
     
 
-    ///
+    ///  Exercise 5: Reverse a String
+
+function stringReverse(string){
+    let reversedString = ""
+    for (let i = string.length - 1; i >= 0; i--){
+    reversedString += string[i]
+        if (reversedString === string.length)
+        break
+    }        console.log(reversedString);
+  
+}
+
+            stringReverse("benadon")
+
+
+
+//// Exercise 6: Number Pyramid
+
+    function numPyramid(){
+
+    for (let i = 1; i <= 5; i++){
+     let   extraNumbers = ""
+        for (let j = 1; j <= i ;j++){
+              extraNumbers += j 
+       }       
+             console.log(extraNumbers);
+}         
+ }      
+
+numPyramid()
+
+//// 
