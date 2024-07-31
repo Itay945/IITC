@@ -155,7 +155,30 @@ function stringReverse(string){
              console.log(extraNumbers);
 }         
  }      
-
 numPyramid()
 
 //// 
+
+
+/// 11
+let letters = ""
+
+function isPalindrome(name) {
+for (let i = 0; i < name.length; i++){
+    for (let j = name.length - 1; j < name.length; j--){
+        letters = name[j]
+        console.log(lettrs);
+
+}
+
+    }
+}
+
+
+
+
+
+
+
+
+isPalindrome("natan1")
