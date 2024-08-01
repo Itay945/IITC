@@ -209,7 +209,52 @@
 // smth_1(6) 
 
 
-// 3
+// // 3
+// let smth = ''
+// function backwards(){
+//     for (let i = 10;i >= 1; i--){
+//         let smth = i
+//         console.log(smth);
+// } 
+  
+// }
+
+// backwards()
 
 
 
+
+
+// /// 4
+// function even(){
+//     for (let i = 1; i <= 10; i++){
+//        if (i % 2 === 0)
+//         console.log(i);
+//     }
+// }
+
+// even()
+
+// task 5
+
+
+// function even(){
+//     for (let i = 1; i <= 10; i++){
+//        if (i % 2 === 1)
+//         console.log(i);
+//     }
+// }
+// even()
+
+
+
+// task 6
+
+function smh() {
+   for  (let i = 0; i <= 25; i+=5) {
+        console.log(i);
+    }
+    
+
+}
+smh()
