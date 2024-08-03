@@ -128,3 +128,29 @@ function colors() {
 colors()
 
 // 22
+let product = 1
+function hihi() {
+    for (let i = 1; i <= 5; i++) {
+        product *= i
+        
+    }    console.log(product);
+}
+
+hihi()
+
+
+
+// 23
+
+
+
+let evenNumbers = [1, 2, 3, 4, 5, 6, 7, 8]
+let count = 0
+function smth() {
+    for (let i = 0; i < evenNumbers.length; i++) {
+        count++
+        
+    }console.log(count);
+}
+
+smth()
