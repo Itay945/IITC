@@ -125,7 +125,6 @@ function colors() {
         
     }
 }
-colors()
 
 // 22
 let product = 1
@@ -136,7 +135,6 @@ function hihi() {
     }    console.log(product);
 }
 
-hihi()
 
 
 
@@ -145,12 +143,32 @@ hihi()
 
 
 let evenNumbers = [1, 2, 3, 4, 5, 6, 7, 8]
-let count = 0
+
 function smth() {
-    for (let i = 0; i < evenNumbers.length; i++) {
-        count++
-        
+    let count = 0
+    for (let i = 0; i <= evenNumbers.length; i++) {
+        if (i % 2 === 0)
+            count++
+        console.log("array", evenNumbers[i]);
     }console.log(count);
+    
+    
 }
 
-smth()
+
+
+
+/// 24
+let xd = [10, 5, 8, 12, 3];
+function largest() {
+    let large = xd[0]
+    for (let i = 1; i < xd.length; i++) {
+       if (xd[i] > large)
+        large = xd[i]
+         
+       
+        
+        
+    }console.log(large);
+}
+largest()
