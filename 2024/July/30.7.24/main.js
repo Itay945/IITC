@@ -1,4 +1,4 @@
-// "use strict"
+"use strict"
 // //https://docs.google.com/document/d/1yB6ErFdyjXWh7INfikVXyVpZ5sTM-htDnYth5FXK0sM/edit#heading=h.4wlm6fu2m3v3
 // //// task 1
 // function starPattern() {
@@ -211,5 +211,49 @@
 
 // 3
 
+function someLoop(){
+for (let i = 10; i >= 1; i--) {
+    console.log(i);
+    }
+}
 
 
+
+// 4
+
+function vash() {
+for (let i = 1; i <= 10; i++) {
+    if (i % 2 === 0)
+   console.log(i);
+    
+}
+}
+
+
+
+// 5
+
+function something() {
+    for (i = 1; i <= 10; i++) {
+        if (i % 2 !== 0)
+            console.log(i);
+    }
+}
+
+
+/// 6
+
+function HIHIHAHA() {
+    for (let i = 0; i <= 19; i++) {
+        if (i % 3 === 1){
+
+            console.log(i);
+            
+            console.log("mod", i % 3);
+        }
+       
+    // console.log("modulus",i % 3);
+    }
+ }
+
+HIHIHAHA()
