@@ -47,7 +47,16 @@ const flatArr = []
     }
     else
     for (let j = 0; j < nestedArray[i].length; j++) {
-      flatArr.push(nestedArray[i][j])
+      if (!Array.isArray(nestedArray[i][j])) {
+        flatArr.push(nestedArray[i][j])
+      
+    }
+    else
+    for (let k = 0; k < nestedArray[i][j].length; k++) {
+      flatArr.push(nestedArray[i][j][k])
+      
+    }
+    
       
     }
     
