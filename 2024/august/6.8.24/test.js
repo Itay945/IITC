@@ -87,7 +87,7 @@ function findProductByName(myProducts, productName) {
     let name = ""
   for (let i = 0; i < myProducts.length; i++){
      
-     if (myProducts[i].name === "Phone")
+     if (myProducts[i].name === productName)
         return productName
     
     
@@ -122,7 +122,7 @@ function countProductsInCategory(products, category) {
 
 
 const count = countProductsInCategory(myProducts, "electronics");
-// console.log("Products in Electronics:", count);
+console.log("Products in Electronics:", count);
 
 
 // 🙂 Task 6: Get Student Ages 🙂
@@ -199,10 +199,12 @@ addGrade(student_1, "math", 85);
 function countCharacterOccurrences(strings, char) {
     let sumOfS = 0
   for (let i = 0; i < strings.length; i++) {
+    for (let j = 0; j < strings[i].length; j++) {
+      
     
-    if (strings[i] === "s")
+    if (strings[i][j] === char)
         sumOfS++
-    
+    }
   }
   return sumOfS
 }
@@ -217,10 +219,16 @@ const c_count = countCharacterOccurrences(strings, "c");
 // 😥 Task 11: Update Product Price by Name 😥
 // TODO: Write a function to update the price of a product by name (You can mutate the original object)
 function updatePriceByName(products, productName, newPrice) {
-  // your code here
-}
+  for (let i = 0; i < products.length; i++) {
+    if (products[i].name === productName) {
+      products[i].price = newPrice;
+      }
+      
+    }
+  }
 
-
+    updatePriceByName(myProducts, "Phone", 550);
+    // console.log("Updated Products:", myProducts);
 // 😥 Task 12: Get Uppercase Strings 😥
 // TODO: Write a function to get an array of uppercase strings (You should return a new array)
 function getUppercaseStrings(strings) {
@@ -232,8 +240,8 @@ const uppercaseStrings = getUppercaseStrings(strings);
 // console.log("Uppercase Strings:", uppercaseStrings);
 
 
-updatePriceByName(myProducts, "Phone", 550);
-// console.log("Updated Products:", products);
+
+
 
 
 // 🥵 Task 13: group strings by spaces occurences 🥵
