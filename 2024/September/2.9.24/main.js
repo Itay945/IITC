@@ -41,19 +41,16 @@
 const nestedArray = [[1, 2, 3], [4, [5, 6]], [7, 8], [9]];
 const flatArr = []
 
-for (let i = 0; i < nestedArray.length; i++) {
-  if (!Array.isArray(nestedArray[i])) {
-    flatArr.push(nestedArray[i])
-  } else
-  for (let j = 0; j < nestedArray[i].length; j++) {
-    if (!Array.isArray(nestedArray[j])) {
-      flatArr.push(nestedArray[j])
+  for (let i = 0; i < nestedArray.length; i++) {
+    if (!Array.isArray(nestedArray[i])) {
+      flatArr.push(nestedArray[i])
+    }
+    else
+    for (let j = 0; j < nestedArray[i].length; j++) {
+      flatArr.push(nestedArray[i][j])
+      
+    }
     
-  }
-}
-  console.log(flatArr);
+    
+    }console.log(flatArr);
   
-  
-  
-  
-}
