@@ -14,21 +14,25 @@ const strings = [
 
 function groupOccurences(params) {
     
-}
+let obj = {}
 for (let i = 0; i < strings.length; i++) {
-    spaceCount = 0
+    let spaceCount = 0
   for (let j = 0; j < strings[i].length; j++) {
     if (strings[i][j] === " ") {
       spaceCount++
       
+      
+      }
     }
     
-  }
-    console.log(spaceCount);
-    
-    
+   if (!obj[spaceCount]){
+      obj[spaceCount] = []
+      
 }
-
+obj[spaceCount].push(strings[i])
+}
+console.log(obj);
+}
 
 
 groupOccurences()
