@@ -94,22 +94,57 @@
 
 
 
+// const numberGrid = [
+//   [15, 29, 12],
+//   [48, 33, 21],
+//   [5, 7, 26]
+// ];
+
+// let max = numberGrid[0][0]
+
+// for (let i = 0; i < numberGrid.length; i++) {
+//   for (let j = 0; j < numberGrid[i].length; j++) {
+//     if (max < numberGrid[i][j]) {
+//       max = numberGrid[i][j]
+//     }
+    
+//   }
+  
+  
+// }console.log(max);
+  
+
+
 const numberGrid = [
-  [15, 29, 12],
-  [48, 33, 21],
-  [5, 7, 26]
+  [1, 2, 3],
+  [2, 3, 4],
+  [3, 4, 5],
+  [1, 3, 4]
 ];
 
-let max = numberGrid[0][0]
+function count(arr) {
 
-for (let i = 0; i < numberGrid.length; i++) {
-  for (let j = 0; j < numberGrid[i].length; j++) {
-    if (max < numberGrid[i][j]) {
-      max = numberGrid[i][j]
+
+
+  const obj = {}
+
+for (let i = 0; i < arr.length; i++) {
+  for (let j = 0; j < arr[i].length; j++) {
+    if (obj[arr[i][j]]) {
+      obj[arr[i][j]]++
+    }else obj[arr[i][j]] = 1
+    
+      
+    }
+      
     }
     
+    return obj
   }
   
-  
-}console.log(max);
-  
+
+
+
+
+
+console.log(count(numberGrid));
