@@ -115,36 +115,94 @@
   
 
 
-const numberGrid = [
-  [1, 2, 3],
-  [2, 3, 4],
-  [3, 4, 5],
-  [1, 3, 4]
-];
+// const numberGrid = [
+//   [1, 2, 3],
+//   [2, 3, 4],
+//   [3, 4, 5],
+//   [1, 3, 4]
+// ];
 
-function count(arr) {
+// function count(arr) {
 
 
 
-  const obj = {}
+//   const obj = {}
 
-for (let i = 0; i < arr.length; i++) {
-  for (let j = 0; j < arr[i].length; j++) {
-    if (obj[arr[i][j]]) {
-      obj[arr[i][j]]++
-    }else obj[arr[i][j]] = 1
+// for (let i = 0; i < arr.length; i++) {
+//   for (let j = 0; j < arr[i].length; j++) {
+//     if (obj[arr[i][j]]) {
+//       obj[arr[i][j]]++
+//     }else obj[arr[i][j]] = 1
     
       
-    }
+//     }
       
-    }
+//     }
     
-    return obj
-  }
+//     return obj
+//   }
   
 
 
 
 
 
-console.log(count(numberGrid));
+// console.log(count(numberGrid));
+
+
+// const arr = [
+//   [15, 29, 12],
+//   [48, 33, 21],
+//   [5, 7, 26],
+//   [12, 14, 18]
+// ];
+
+
+// let sum = 0
+// for (let i = 0; i < arr.length; i++) {
+//   for (let j = 0; j < arr[i].length; j++) {
+//     if (arr[i][j] % 2 === 0) {
+//       sum += arr[i][j]
+//     }
+    
+    
+//   }
+  
+// }console.log(sum);
+
+
+// 🤨 Task 7: Get Products by Category 🤨
+// TODO: Write a function to get products by category /// and do what with them?
+
+
+const myProducts = [
+    { name: "Laptop", price: 1000, categories: ["electronics", "computers"] },
+    { name: "Shirt", price: 500, categories: ["clothing"] },
+    { name: "Phone", price: 4200, categories: ["electronics", "gadgets"] },
+  ];
+  
+
+
+//   for (let i = 0; i < myProducts.length; i++) {
+//     for (let j = 0; j < myProducts[i].categories.length; j++) {
+        
+        
+        
+//     }
+//     console.log(myProducts[i].categories);
+    
+    
+//   }
+
+
+// 🤨 Task 8: Get Average product prices 🤨
+// TODO: Write a function to get the average price of all products
+let sum = 0
+for (let i = 0; i < myProducts.length; i++) {
+   
+        sum += myProducts[i].price
+        
+        
+    }console.log(sum);
+    
+    
