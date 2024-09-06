@@ -197,12 +197,14 @@ const myProducts = [
 
 // 🤨 Task 8: Get Average product prices 🤨
 // TODO: Write a function to get the average price of all products
-let sum = 0
-for (let i = 0; i < myProducts.length; i++) {
+// let sum = 0
+// for (let i = 0; i < myProducts.length; i++) {
    
-        sum += myProducts[i].price
+//         sum += myProducts[i].price
         
         
-    }console.log(sum);
+//     }console.log(sum);
     
     
+
+
