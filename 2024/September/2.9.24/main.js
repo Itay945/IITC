@@ -206,32 +206,58 @@ const myProducts = [
 //     }console.log(sum);
     
     
-const students = [
-  { name: "Alice", grades: [85, 90, 78] },
-  { name: "Bob", grades: [80, 75, 88] },
-  { name: "Charlie", grades: [95, 92, 91] },
+// const students = [
+//   { name: "Alice", grades: [85, 90, 78] },
+//   { name: "Bob", grades: [80, 75, 88] },
+//   { name: "Charlie", grades: [95, 92, 91] },
+// ];
+
+
+
+
+//   const students2 = []
+// for (let i = 0; i < students.length; i++) {
+//     let sum = 0
+
+//   for (let j = 0; j < students[i].grades.length; j++) {
+//    sum += students[i].grades[j]
+//     } 
+    
+//  let average = sum / students[i].grades.length
+//   students2.push({name: students[i].name,  averageGrade: average })
+    
+//   }
+    
+//   console.log(students2);
+  
+  
+  
+  
+  
+const products = [
+  { name: "Laptop", price: 1000, categories: ["electronics", "computers"] },
+  { name: "Shirt", price: 50, categories: ["clothing"] },
+  { name: "Phone", price: 500, categories: ["electronics", "gadgets"] },
+  { name: "Book", price: 20, categories: ["education", "books"] }
 ];
 
-
-
-
-  const students2 = []
-for (let i = 0; i < students.length; i++) {
-    let sum = 0
-
-  for (let j = 0; j < students[i].grades.length; j++) {
-   sum += students[i].grades[j]
-    } 
-    
- let average = sum / students[i].grades.length
-  students2.push({name: students[i].name,  averageGrade: average })
-    
+function getProductsByCategory(category) {
+  let answer = []
+  for (let i = 0; i < products.length; i++) {
+    if (products[i].categories.includes(category)) {
+      answer.push(products[i])
+    }
+      
+    } return answer
   }
+   
+      
+  console.log(getProductsByCategory("computers") );
+       
+      
     
-  console.log(students2);
+    
+ 
+      
   
-  
-  
-  
-  
-  
+
