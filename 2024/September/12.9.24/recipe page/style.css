@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family:youngSerif ;
+    src: url(./assets/Young_Serif/YoungSerif-Regular.ttf);
+}
+@font-face {
+    font-family:outfit ;
+    src: url(./assets/Outfit/Outfit-VariableFont_wght.ttf);
+}
+
+html{
+font-family: outfit;
+font-weight: 300;
+
+
+
+
+}
+:root {
+    --white-100: hsl(0, 0%, 100%);
+
+    --Stone-100: hsl(30, 54%, 90%);
+    --Stone-150: hsl(30, 18%, 87%);
+    --Stone-600: hsl(30, 10%, 34%);
+    --Stone-900: hsl(24, 5%, 18%);
+    
+    --Brown-800: hsl(14, 45%, 36%);
+
+    --Rose-800: hsl(332, 51%, 32%);
+    --Rose-50: hsl(330, 100%, 98%);
+
+}
+.over-body-padding{
+    padding-inline: 30px;
+}
+
+img{
+    width: 100%;
+    
+    
+}
+.full-structure {
+    display: flex;
+    flex-direction: column;
+    padding-block: 50px;
+}
+
+.omelette-img {
+max-width: 100%;
+height: 100%;
+}
+
+h1 {
+    font-family: youngSerif;
+   padding-top: 33px;
+   padding-bottom: 14px;
+
+}
+
+prep-time-bcg{
+
+}
+
