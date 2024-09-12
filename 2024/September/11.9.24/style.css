@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+
+
+
+
+
+
+.navigation-bar {
+    display: flex;
+    justify-content: space-between;
+    background-color:rebeccapurple;
+    font-size: 20px;
+    color: white;
+    align-items: center;
+    padding: 20px;
+    
+    
+}
+.a-buttons a:hover {
+color: black;
+
+}
+
+.container {
+    display: flex;
+    border-style: solid 1px;
+    border-color: red;
+    
+}
