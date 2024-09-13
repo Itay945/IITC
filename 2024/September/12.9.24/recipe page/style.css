@@ -47,6 +47,7 @@ img{
     display: flex;
     flex-direction: column;
     padding-block: 50px;
+    
 }
 
 .omelette-img {
@@ -56,12 +57,23 @@ height: 100%;
 
 h1 {
     font-family: youngSerif;
-   padding-top: 33px;
-   padding-bottom: 14px;
-
+   margin-top: 40px;
+margin-bottom: 20px;
 }
 
-prep-time-bcg{
-
+.preperation{
+    background-color: var(--Rose-50);
+    border-radius: 6px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    line-height: 1.7;
+    padding: 30px;
+    color: var(--Brown-800);
 }
-
+h5 {
+    font-size: 1.1rem;
+}
+li{
+    padding: 10px;
+    margin-left: 7px;
+}
