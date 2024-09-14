@@ -61,19 +61,76 @@ h1 {
 margin-bottom: 20px;
 }
 
+h5 {
+    font-size: 1.15rem;
+    padding-bottom: 5px;
+   
+
+}
+h3 {
+    font-family: youngSerif;
+    font-weight: 500;
+    color: var(--Brown-800);
+    margin-block: 15px;
+    font-size: 1.3rem;
+    position: relative;
+    right: 10px;
+
+}
 .preperation{
     background-color: var(--Rose-50);
     border-radius: 6px;
     margin-top: 30px;
     margin-bottom: 30px;
-    line-height: 1.7;
-    padding: 30px;
+    line-height: 1.3;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-inline: 30px;
     color: var(--Brown-800);
 }
-h5 {
-    font-size: 1.1rem;
-}
+
 li{
     padding: 10px;
     margin-left: 7px;
+    color: var(--Brown-800);
+}
+span {
+    font-weight: 700;
+    color: var(--Brown-800);
+}
+
+
+
+hr {
+    border: none;
+    height: 1px;
+    border-width: 0.1px;
+    background-color: var(--Stone-150);
+    margin-top: 7px;
+}
+td{
+    
+    border-bottom: 1px solid var(--Stone-150) ;
+    
+    padding-top: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 11px;
+}
+table {
+    border-collapse: collapse;
+}
+@media (min-width: 840px) {
+   
+.container{
+    
+}
+.background {
+    background-color: var(--Stone-150);
+    width: 150%;
+}
+
+.over-body-padding{
+    padding-inline: 100px;
+}
 }
