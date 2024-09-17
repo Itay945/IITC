@@ -16,12 +16,20 @@ myBtn.addEventListener("click", function (){
     
 })
 const parant = document.getElementById("parant")
-const newLi = document.createElement("li")
-newLi.textContent = "New Item"
-parant.appendChild(newLi)
+// const newLi = document.createElement("li")
+// newLi.textContent = "New Item"
+// parant.appendChild(newLi)
 
 const addItem = document.getElementById("addItem")
-addItem.addEventListener("click" function (ev.){
-    
+addItem.addEventListener("click", function (ev){
+    if (ev){
+        const newLi = document.createElement("li")
+        newLi.textContent = "New Item"
+        parant.appendChild(newLi)
+        console.log("Item added!");
+    }
+        
+        
+        
 })
-
+console.log(newLi);
