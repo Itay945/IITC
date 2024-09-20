@@ -15,9 +15,16 @@ let gTasks = [
         status: "true"
     }
     ]
-    console.log(gTasks);
 
 
+    
+for (let i = 0; i < gTasks.length; i++) {
+    const taskName = gTasks[i].taskName // task name
+    const taskStatus = gTasks[i].status // task status
+    elTask.innerHTML = `
+    <div>${taskName}</div>
+    <div>${taskStatus}</div>`
+    elUl.appendChild(elTask)
 
 const elInputTask = document.getElementById("Input-task") // task input
 const Taskvalue = elInputTask.value //task value
@@ -35,6 +42,8 @@ const elButton = document.querySelector(".submit")
     elButton.addEventListener("click", function (ev) {
         ev.preventDefault();
         const elTask = document.createElement("li"); //li
+        const Taskvalue = elInputTask.value //task value
+        const statusValue = elInputStatus.value // status value
         elTask.innerHTML = `
     <div>${Taskvalue}</div>
     <div>${statusValue}</div>`
@@ -44,14 +53,9 @@ const elButton = document.querySelector(".submit")
         
     })    
 
-// for (let i = 0; i < gTasks.length; i++) {
-//     const taskName = gTasks[i].taskName // task name
-//     const taskStatus = gTasks[i].status // task status
-//     elUl.push(taskName)
-//     elUl.push(taskStatus)
-//      console.log(gTasks[i].taskName);
+    
      
-// }
+}
 
 function createTask(task, status) {
     const newTask = {
