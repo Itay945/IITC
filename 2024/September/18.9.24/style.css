@@ -1,0 +1,15 @@
+input {
+    display: inline-block;
+ 
+}
+
+ul { 
+    list-style-type: none;
+    
+}
+
+li {
+    display: flex;
+    gap: 1rem
+
+}
