@@ -2,70 +2,63 @@ let gTasks = [
     {
         id: makeId(),
         taskName: "gardening",
-        status: "false"
+        status: "in progress"
     },
     {
         id: makeId(),
         taskName: "constraction",
-        status: "false"
+        status: "finished"
     },
     {
         id: makeId(),
         taskName: "cooking",
-        status: "true"
+        status: "in progress"
     }
     ]
 
 
-    
-for (let i = 0; i < gTasks.length; i++) {
-    const taskName = gTasks[i].taskName // task name
-    const taskStatus = gTasks[i].status // task status
-    elTask.innerHTML = `
-    <div>${taskName}</div>
-    <div>${taskStatus}</div>`
-    elUl.appendChild(elTask)
 
+    
+const elButton = document.querySelector(".submit")
+elButton.addEventListener("click", function (ev) {
+    ev.preventDefault();
+    const elTask = document.createElement("li"); //li
+    const taskValue = elInputTask.value //task value
+    const statusValue = elInputStatus.value // status value
+    elTask.innerHTML = `
+<div>${taskValue}</div>
+<div>${statusValue}</div>`
+// <button onclick="deleteStudent('${student.id}')">Delete</button>`;
+    elUl.appendChild(elTask)
+   elInputStatus.value = "" // resetting the input each time
+   elInputTask.value = "" // resetting the input each time
+    
+})  
+    
+// for (let i = 0; i < gTasks.length; i++) {        // not working for me //
+//     const taskName = gTasks[i].taskName // task name
+//     const taskStatus = gTasks[i].status // task status
+    
+//     elTask.innerHTML = `
+//     <div>${taskName}</div>
+//     <div>${taskStatus}</div>`
+//     elUl.appendChild(elTask) 
+// }
 const elInputTask = document.getElementById("Input-task") // task input
-const Taskvalue = elInputTask.value //task value
+
 const elInputStatus = document.getElementById("Input-status") // status input
-const statusValue = elInputStatus.value // status value
+
 const elUl = document.getElementById("ul-id") //ul
 
-console.log(Taskvalue);
-console.log(statusbar);
 
 
 
+  
 
-const elButton = document.querySelector(".submit")
-    elButton.addEventListener("click", function (ev) {
-        ev.preventDefault();
-        const elTask = document.createElement("li"); //li
-        const Taskvalue = elInputTask.value //task value
-        const statusValue = elInputStatus.value // status value
-        elTask.innerHTML = `
-    <div>${Taskvalue}</div>
-    <div>${statusValue}</div>`
-    // <button onclick="deleteStudent('${student.id}')">Delete</button>`;
-        elUl.appendChild(elTask)
-        console.log(Taskvalue);
-        
-    })    
-
-    
+ 
      
-}
+console.log(elButton);
 
-function createTask(task, status) {
-    const newTask = {
-        id: makeId(),
-        taskName: task,
-        status: status,
-
-    }   
-gTasks.push(newTasktask)
-}
 
 function makeId() {
     let id = "";
