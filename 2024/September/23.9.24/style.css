@@ -1,0 +1,28 @@
+
+.grid {
+    padding: 5px;
+    width: 120px;
+    background-color: lightblue;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    gap: 5px;
+   
+    
+}
+
+.grid-item {
+    background-color: cyan;
+}
+.two {
+    grid-column-start: 2;
+    grid-column-end: -1;
+}
+.six {
+    grid-row: span 2;
+}
+.nine {
+    grid-column-start: 2;
+    grid-column-end: -1;
+
+}
