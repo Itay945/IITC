@@ -23,7 +23,8 @@ body{
     display: flex;
     justify-content: center;
     min-height: 100vh
-   
+ 
+    
 }
 .container {
     width: 95%;
@@ -85,9 +86,14 @@ h1{
 }
 
 @media (min-width: 840px) { 
-  .container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
 
+    
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-items: stretch;
+    }
+    
   }
-}
