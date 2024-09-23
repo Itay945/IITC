@@ -21,8 +21,12 @@ const elInputStatus = document.getElementById("Input-status") // status input
 
 const elUl = document.getElementById("ul-id") //ul
 
-function renderTasks() {
 
+function renderTasks() {
+    const deleteButton.addEventListener("click", function(ev) {
+        
+    })
+    
     for (let i = 0; i < gTasks.length; i++) {
       const task = gTasks[i]  
       console.log(task);
@@ -65,9 +69,7 @@ elButton.addEventListener("click", function (ev) {
 
 
 
-  
 
- 
      
 console.log(elButton);
 
