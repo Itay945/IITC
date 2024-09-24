@@ -64,6 +64,7 @@ html{
 .jonathan{
 background-color: var(--500Verydarkgrayishblue);
 color: var(--100Lightgray);
+grid-column: ;
 }
 
 .jeanette{
@@ -90,11 +91,14 @@ h1{
     .span-2 {
         grid-column: span 2;
     }
-    .kira {
-        grid-column-start: 2;
-        grid-column-end: 4;;
+     .kira {
+       grid-column: 4 / 5;
+       grid-row: -1;
     }
-
+    .patrick{
+        display: flex;
+        flex-direction: column;
+    }
     .container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
