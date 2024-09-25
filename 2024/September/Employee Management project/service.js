@@ -1,5 +1,5 @@
 import { utils } from "./utilities.js";
-
+ const employees_key = "employee"
 export const gEmployees = [
     {
         id: utils.makeId(),
@@ -65,3 +65,4 @@ export const gEmployees = [
         salary: 50000
     }
 ];
+utils.saveToStorage(employees_key, gEmployees);

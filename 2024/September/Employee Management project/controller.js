@@ -1,5 +1,7 @@
 import { gEmployees } from "./service.js"
-
+import { utils } from "./utilities.js"
+// keys
+const employees_key_added = "employeeAdded"
 // ID's
 const elForm = document.getElementById("form") //form
 const elUl = document.getElementById("ul") //ul
@@ -18,14 +20,23 @@ for (let i = 0; i < gEmployees.length; i++) {
     console.log(Employee);
     const elNewLi = document.createElement("li"); //li
     elNewLi.innerHTML = `
+    
 <div>${Employee.firstName}</div>    
 <div>${Employee.lastName}</div>
 <div>${Employee.age}</div>
 <div>${Employee.startDate}</div>
 <div>${Employee.department}</div>
-<div>${Employee.salary}</div>`
-{/* <button onclick="deleteTask('${student.id}')">Delete</button>`; */}
+<div>${Employee.salary}</div>
+<div class="innerHTMLdiv">
+<button class="delete-button">Delete</button>
+<button class="edit-button">Edit</button>
+<div>`
     elUl.appendChild(elNewLi)
+    const elDeleteButton = elNewLi.querySelector(".delete-button")
+    elDeleteButton.addEventListener('click', function () {
+        elNewLi.remove()
+    })
+    utils.saveToStorage(employees_key_added, gEmployees);
   }
 } renderEmployees()
 
@@ -45,8 +56,11 @@ elForm.addEventListener("submit", function (ev) {
 <div>${ageValue}</div>
 <div>${dateValue}</div>
 <div>${departmentValue}</div>
-<div>${salaryValue}</div>`
-{/* <button onclick="deleteTask('${student.id}')">Delete</button>`; */}
+<div>${salaryValue}</div>
+<div class="innerHTMLdiv">
+<button class="delete-button">Delete</button>
+<button class="edit-button">Edit</button>
+<div>`
     elUl.appendChild(elNewLi)
     elFirstName.value = "" // resetting the input each time 
     elLastName.value = "" // resetting the input each time
@@ -54,5 +68,12 @@ elForm.addEventListener("submit", function (ev) {
     elDate.value = "" // resetting the input each time
     elDepartment.value = "" // resetting the input each time
     elSalary.value = "" // resetting the input each time
-    
+    const elDeleteButton = elNewLi.querySelector(".delete-button")
+    elDeleteButton.addEventListener('click', function () {
+        elNewLi.remove()
+        
+    })
+    utils.saveToStorage(employees_key_added, gEmployees);
 })
+
+

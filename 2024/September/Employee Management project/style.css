@@ -1,14 +1,102 @@
-li {
-    list-style: none;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgba(194, 192, 192, 0.644);
+}
+.container {
     display: flex;
-    gap: 1rem;
+    flex-direction: column;
+   
+    width: 100%;
+    height: 100vh;
+}
+@font-face {
+    font-family: sansWork;
+    src: url(./Work_Sans/static/WorkSans-Bold.ttf);
+}
+form {
+
+}
+ul {
+margin-inline: 5%;
+margin-top: 15rem;
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr 1fr;
+ gap: 10px;
+
+}
+li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 1px;
+    border-color: rgba(0, 0, 0, 0.13);
+    border-radius: 10px;
+    list-style: none;
+    overflow: hidden;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
     font-size: medium;
+    background-color: rgb(169, 207, 219);
+    height: 150px;
 }
 
+
 html{
-    font-family: sans-serif;
-}
-/* }
-.container{
+    font-family: sansWork;
+    font-weight: 400
     
-}  */
+}
+.delete-button{
+    padding: 7px;
+    margin-bottom: 4px;
+    width: 75px;
+    border-radius: 3px;
+    border: none 1px;
+background-color: rgba(223, 76, 76, 0.877);
+}
+.edit-button{
+    padding: 7px;
+    margin-bottom: 4px;
+    width: 75px;
+    border-radius: 2px;
+    border: none 1px;
+    background-color: rgba(172, 131, 131, 0.61);
+
+}
+.add-button{
+    padding: 7px;
+    margin-bottom: 4px;
+    margin-top: 6px;
+    width: 75px;
+    border-radius: 3px;
+    border: none 1px;
+    background-color: rgba(172, 131, 131, 0.61);
+
+}
+
+input {
+    text-align: center;
+    width: 150px;
+    height: 25px;
+    border-color: rgba(0, 0, 0, 0.301);
+    
+    border-radius: 4px;
+}
+
+.input-container {
+    margin-top: 3rem;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+.delete-button:hover, .add-button:hover, .edit-button:hover{
+    background-color: rgba(66, 157, 160, 0.418);
+}
