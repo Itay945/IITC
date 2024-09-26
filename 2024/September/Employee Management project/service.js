@@ -66,3 +66,46 @@ export let gEmployees = [
     }
 ];
 utils.saveToStorage(employees_key, gEmployees);
+
+// edits employees
+export    function editEmployees(elNewLi) {
+    const firstNameDiv = elNewLi.querySelector(".employee-firstName");
+    const lastNameDiv = elNewLi.querySelector(".employee-lastName");
+    const ageDiv = elNewLi.querySelector(".employee-age");
+    const startDateDiv = elNewLi.querySelector(".employee-startDate");
+    const departmentDiv = elNewLi.querySelector(".employee-department");
+    const salaryDiv = elNewLi.querySelector(".employee-salary");
+
+
+
+    firstNameDiv.innerHTML = `<input type="text" value="${firstNameDiv.textContent}" class="edit-firstName">`;
+    lastNameDiv.innerHTML = `<input type="text" value="${lastNameDiv.textContent}" class="edit-lastName">`;
+    ageDiv.innerHTML = `<input type="number" value="${ageDiv.textContent}" class="edit-age">`;
+    startDateDiv.innerHTML = `<input type="date" value="${startDateDiv.textContent}" class="edit-startDate">`;
+    departmentDiv.innerHTML = `<input type="text" value="${departmentDiv.textContent}" class="edit-department">`;
+    salaryDiv.innerHTML = `<input type="number" value="${salaryDiv.textContent}" class="edit-salary">`;
+    
+
+    const elEditButton = elNewLi.querySelector(".edit-button");
+    elEditButton.textContent = "Save";
+}
+// saves edit changes
+export    function saveChanges(elNewLi) {
+    const firstNameInput = elNewLi.querySelector(".edit-firstName");
+    const lastNameInput = elNewLi.querySelector(".edit-lastName");
+    const ageInput = elNewLi.querySelector(".edit-age");
+    const startDateInput = elNewLi.querySelector(".edit-startDate");
+    const departmentInput = elNewLi.querySelector(".edit-department");
+    const salaryInput = elNewLi.querySelector(".edit-salary");
+
+
+    elNewLi.querySelector(".employee-firstName").textContent = firstNameInput.value;
+    elNewLi.querySelector(".employee-lastName").textContent = lastNameInput.value;
+    elNewLi.querySelector(".employee-age").textContent = ageInput.value;
+    elNewLi.querySelector(".employee-startDate").textContent = startDateInput.value;
+    elNewLi.querySelector(".employee-department").textContent = departmentInput.value;
+    elNewLi.querySelector(".employee-salary").textContent = salaryInput.value;
+
+    const elEditButton = elNewLi.querySelector(".edit-button");
+    elEditButton.textContent = "Edit";
+}

@@ -42,7 +42,8 @@ li {
     width: 100%;
     font-size: medium;
     background-color: rgb(169, 207, 219);
-    height: 150px;
+    height: 200px;
+    padding-top: 10px;
 }
 
 
@@ -58,10 +59,12 @@ html{
     border-radius: 3px;
     border: none 1px;
 background-color: rgba(223, 76, 76, 0.877);
+padding-top: 7px;
 }
 .edit-button{
     padding: 7px;
     margin-bottom: 4px;
+    padding-top: 7px;
     width: 75px;
     border-radius: 2px;
     border: none 1px;
@@ -76,7 +79,7 @@ background-color: rgba(223, 76, 76, 0.877);
     border-radius: 3px;
     border: none 1px;
     background-color: rgba(172, 131, 131, 0.61);
-
+    
 }
 
 input {
