@@ -100,3 +100,10 @@ input {
 .delete-button:hover, .add-button:hover, .edit-button:hover{
     background-color: rgba(66, 157, 160, 0.418);
 }
+select {
+    text-align: center;
+    width: 150px;
+    height: 25px;
+    border-color: rgba(0, 0, 0, 0.301);
+    border-radius: 4px;
+}

@@ -9,7 +9,7 @@ const elFirstName = document.getElementById("input-name")
 const elLastName = document.getElementById("input-lastName")
 const elAge = document.getElementById("input-age")
 const elDate = document.getElementById("input-startDate")
-const elDepartment = document.getElementById("input-department") // add select option
+const elDepartment = document.getElementById("input-Department") // add select option
 const elSalary = document.getElementById("input-salary")
 //rendering dummy database
 function renderEmployees() {
@@ -70,9 +70,15 @@ elForm.addEventListener("submit", function (ev) {
     elSalary.value = "" // resetting the input each time
     const elDeleteButton = elNewLi.querySelector(".delete-button")
     elDeleteButton.addEventListener('click', function () {
-        elNewLi.remove()
-        
-    })
+        elNewLi.remove() 
+   })
+   const elEditButton = elNewLi.querySelector(".edit-button")
+   elEditButton.addEventListener('click', function () {
+        if (button.textcontent === "edit") {
+            
+        }
+   })
+
     utils.saveToStorage(employees_key_added, gEmployees);
 })
 

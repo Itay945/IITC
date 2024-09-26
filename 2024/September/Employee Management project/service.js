@@ -1,6 +1,6 @@
 import { utils } from "./utilities.js";
- const employees_key = "employee"
-export const gEmployees = [
+ let employees_key = "employee"
+export let gEmployees = [
     {
         id: utils.makeId(),
         firstName: "Alice",
