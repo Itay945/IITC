@@ -17,7 +17,9 @@ const elFilterDepartment = document.getElementById("Filter");
 
 const dataFromStorage = utils.getFromStorage('employees')
 
-let dataBase = dataFromStorage ? dataFromStorage : gEmployees 
+export let dataBase = dataFromStorage ? dataFromStorage : gEmployees 
+
+
 
 function loadEmployees() {
 
@@ -167,7 +169,8 @@ function filterEmployeesByDepartment(department) {
                 elNewLi.remove();
                
             
-                console.log(employeeId);
+                
+                // console.log(employeeId);
                 
                 let newList = dataBase.filter(worker => worker.id !== employeeId)
                 dataBase = newList
@@ -182,8 +185,9 @@ function filterEmployeesByDepartment(department) {
                     editEmployees(elNewLi);
                     ev.target.textContent = "Save";
                 } else if (ev.target.textContent === "Save") {
-                    saveChanges(elNewLi);
+                    saveChanges(elNewLi, employeeId);
                     ev.target.textContent = "Edit";
+
                 }
             });
         }

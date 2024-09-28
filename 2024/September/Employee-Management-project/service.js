@@ -1,4 +1,5 @@
 import { utils } from "./utilities.js";
+import { dataBase } from "./controller.js";
 export let gEmployees = [
     {
         id: utils.makeId(),
@@ -88,7 +89,7 @@ export    function editEmployees(elNewLi) {
     elEditButton.textContent = "Save";
 }
 // saves edit changes
-export    function saveChanges(elNewLi) {
+export    function saveChanges(elNewLi, employeeId) {
     const firstNameInput = elNewLi.querySelector(".edit-firstName");
     const lastNameInput = elNewLi.querySelector(".edit-lastName");
     const ageInput = elNewLi.querySelector(".edit-age");
@@ -104,6 +105,11 @@ export    function saveChanges(elNewLi) {
     elNewLi.querySelector(".employee-department").textContent = departmentInput.value;
     elNewLi.querySelector(".employee-salary").textContent = salaryInput.value;
 
+    // TODO LOGIC 
+    // const workers = dataBase.find((worker) => worker.id === employeeId)
+    // console.log(workers);
+    
+    // utils.saveToStorage(dataBase)
     const elEditButton = elNewLi.querySelector(".edit-button");
     elEditButton.textContent = "Edit";
 }
