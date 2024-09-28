@@ -1,9 +1,9 @@
 import { editEmployees, saveChanges} from "./service.js";
 import { utils } from "./utilities.js"
 import { gEmployees } from "./service.js";
-console.log("ho");
+
 // keys
-const employees_key_added = "employees"
+
 // ID's
 const elForm = document.getElementById("form") //form
 const elUl = document.getElementById("ul") //ul
@@ -14,6 +14,10 @@ const elDate = document.getElementById("input-startDate")
 const elDepartment = document.getElementById("input-Department") 
 const elSalary = document.getElementById("input-salary")
 const elFilterDepartment = document.getElementById("Filter");
+
+const dataFromStorage = utils.getFromStorage('employees')
+
+let dataBase = dataFromStorage ? dataFromStorage : gEmployees 
 
 function loadEmployees() {
 
@@ -65,7 +69,7 @@ for (let i = 0; i < gEmployees.length; i++) {
     }
 });
     
-    utils.saveToStorage(employees_key_added, gEmployees);
+    utils.saveToStorage();
   }
 } 
 
@@ -79,6 +83,15 @@ elForm.addEventListener("submit", function (ev) {
     const dateValue = elDate.value // last name value
     const departmentValue = elDepartment.value // last name value
     const salaryValue = elSalary.value // last name value
+
+    const newEmployee = {id: utils.makeId(),
+        firstName: nameValue,
+        lastName: lastNameValue,
+        age: ageValue,
+        startDate: dateValue,
+        department: departmentValue,
+        salary: salaryValue}
+    dataBase.push(newEmployee)
     elNewLi.innerHTML = `
 <div class="employee-firstName">${nameValue}</div>    
 <div class="employee-lastName">${lastNameValue}</div>
@@ -91,6 +104,7 @@ elForm.addEventListener("submit", function (ev) {
 <button class="edit-button">Edit</button>
 <div>`
     elUl.appendChild(elNewLi)
+    utils.saveToStorage(dataBase)
     elFirstName.value = "" // resetting the input each time 
     elLastName.value = "" // resetting the input each time
     elAge.value = "" // resetting the input each time
@@ -109,11 +123,11 @@ elForm.addEventListener("submit", function (ev) {
     } else if (ev.target.textContent === "Save") {
         ev.preventDefault();
         saveChanges(elNewLi);
-        utils.saveToStorage()
+        
     }
 });
 
-    utils.saveToStorage(employees_key_added, gEmployees);
+
 })
 
 
@@ -129,7 +143,7 @@ function filterEmployeesByDepartment(department) {
 
 
 
-    gEmployees.forEach(employee => {
+    dataBase.forEach(employee => {
         
         if (department === "" || employee.department === department) {
             const elNewLi = document.createElement("li");
@@ -145,12 +159,20 @@ function filterEmployeesByDepartment(department) {
                     <button class="edit-button">Edit</button>
                     </div>`;
                     
-            
+                let employeeId = employee.id
             elUl.appendChild(elNewLi);
 
             const elDeleteButton = elNewLi.querySelector(".delete-button");
             elDeleteButton.addEventListener('click', function () {
                 elNewLi.remove();
+               
+            
+                console.log(employeeId);
+                
+                let newList = dataBase.filter(worker => worker.id !== employeeId)
+                dataBase = newList
+                utils.saveToStorage(dataBase)
+                
             });
 
             const elEditButton = elNewLi.querySelector(".edit-button");

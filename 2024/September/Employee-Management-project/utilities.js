@@ -10,14 +10,17 @@ function makeId() {
   }
   
   function getFromStorage(key) {
+    console.log(key);
+    console.log(localStorage.getItem(key));
+    
     return JSON.parse(localStorage.getItem(key));
   }
-  
+                           
   // function saveToStorage(key, value) {
   //   localStorage.setItem(key, JSON.stringify(value));
   // }
-  function saveToStorage() {
-    localStorage.setItem('employees', JSON.stringify(gEmployees));
+  function saveToStorage(dataBase) {
+    localStorage.setItem('employees', JSON.stringify(dataBase));
   }
   
   
