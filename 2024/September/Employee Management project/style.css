@@ -17,15 +17,13 @@ body {
     font-family: sansWork;
     src: url(./Work_Sans/static/WorkSans-Bold.ttf);
 }
-form {
-
-}
 ul {
 margin-inline: 5%;
 margin-top: 15rem;
  display: grid;
  grid-template-columns: 1fr 1fr 1fr 1fr;
  gap: 10px;
+
 
 }
 li {
@@ -109,4 +107,14 @@ select {
     height: 25px;
     border-color: rgba(0, 0, 0, 0.301);
     border-radius: 4px;
+}
+.Filter {
+    text-align: center;
+    width: 150px;
+    height: 25px;
+    border-color: rgba(0, 0, 0, 0.301);
+    border-radius: 4px;
+    width: 200px;
+    height: 50px;
+    background-color: rgba(22, 159, 201, 0.22);
 }

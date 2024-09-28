@@ -11,13 +11,13 @@ const elAge = document.getElementById("input-age")
 const elDate = document.getElementById("input-startDate")
 const elDepartment = document.getElementById("input-Department") 
 const elSalary = document.getElementById("input-salary")
+const elFilterDepartment = document.getElementById("Filter");
 //rendering dummy database
 function renderEmployees() {
     
 
 for (let i = 0; i < gEmployees.length; i++) {
     const Employee = gEmployees[i]  
-    console.log(Employee);
     const elNewLi = document.createElement("li"); //li
     elNewLi.innerHTML = `
     
@@ -50,7 +50,7 @@ for (let i = 0; i < gEmployees.length; i++) {
     
     utils.saveToStorage(employees_key_added, gEmployees);
   }
-} renderEmployees()
+} 
 
 //Preventing default
 elForm.addEventListener("submit", function (ev) {
@@ -99,3 +99,48 @@ elForm.addEventListener("submit", function (ev) {
 })
 
 
+elFilterDepartment.addEventListener("change", function() {
+    const selectedDepartment = elFilterDepartment.value;
+    filterEmployeesByDepartment(selectedDepartment); 
+});
+function filterEmployeesByDepartment(department) {
+    elUl.innerHTML = ""; 
+
+    gEmployees.forEach(employee => {
+        if (department === "" || employee.department === department) {
+            const elNewLi = document.createElement("li");
+            elNewLi.innerHTML = `
+                <div class="employee-firstName">${employee.firstName}</div>    
+                <div class="employee-lastName">${employee.lastName}</div>
+                <div class="employee-age">${employee.age}</div>
+                <div class="employee-startDate">${employee.startDate}</div>
+                <div class="employee-department">${employee.department}</div>
+                <div class="employee-salary">${employee.salary}</div>
+                <div class="innerHTMLdiv">
+                    <button class="delete-button">Delete</button>
+                    <button class="edit-button">Edit</button>
+                </div>`;
+            
+            elUl.appendChild(elNewLi);
+
+            const elDeleteButton = elNewLi.querySelector(".delete-button");
+            elDeleteButton.addEventListener('click', function () {
+                elNewLi.remove();
+            });
+
+            const elEditButton = elNewLi.querySelector(".edit-button");
+            elEditButton.addEventListener('click', function (ev) {
+                ev.preventDefault();
+                if (ev.target.textContent === "Edit") {
+                    editEmployees(elNewLi);
+                    ev.target.textContent = "Save";
+                } else if (ev.target.textContent === "Save") {
+                    saveChanges(elNewLi);
+                    ev.target.textContent = "Edit";
+                }
+            });
+        }
+    });
+}
+filterEmployeesByDepartment("")
+renderEmployees()

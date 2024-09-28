@@ -7,7 +7,7 @@ export let gEmployees = [
         lastName: "Smith",
         age: 28,
         startDate: "2020-06-15",
-        department: "Marketing",
+        department: "Human Resources",
         salary: 50000
     },
     {
@@ -16,7 +16,7 @@ export let gEmployees = [
         lastName: "Doe",
         age: 35,
         startDate: "2018-01-25",
-        department: "Sales",
+        department: "Quality Assurence",
         salary: 60000
     },
     {
@@ -25,7 +25,7 @@ export let gEmployees = [
         lastName: "Johnson",
         age: 42,
         startDate: "2015-03-12",
-        department: "IT",
+        department: "Developers",
         salary: 70000
     },
     {
@@ -34,7 +34,7 @@ export let gEmployees = [
         lastName: "Brown",
         age: 30,
         startDate: "2019-07-01",
-        department: "Finance",
+        department: "Operations",
         salary: 55000
     },
     {
@@ -43,7 +43,7 @@ export let gEmployees = [
         lastName: "Williams",
         age: 26,
         startDate: "2021-05-20",
-        department: "HR",
+        department: "Human Resources",
         salary: 45000
     },
     {
@@ -61,7 +61,7 @@ export let gEmployees = [
         lastName: "White",
         age: 32,
         startDate: "2016-11-03",
-        department: "Logistics",
+        department: "Developers",
         salary: 50000
     }
 ];

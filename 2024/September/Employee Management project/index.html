@@ -16,10 +16,9 @@
             <input type="text" placeholder="Last Name" id="input-lastName"required>
             <input type="number" placeholder="Age" id="input-age"required>
             <input type="date"  id="input-startDate"required>
-            <!-- <input type="text" placeholder="Department" id="input-department"required>
-              -->
             <select name="Department" id="input-Department">
-                <option value="" disabled selected>Select Department</option>                <option value="Developers">Developers</option>
+                <option value="" disabled selected>Select Department</option>
+                <option value="Developers">Developers</option>
                 <option value="Operations">Operations</option>
                 <option value="Quality Assurence">Quality Assurence</option>
                 <option value="Human Resources">Human Resources</option>
@@ -28,9 +27,18 @@
             <input type="number" placeholder="Salary" id="input-salary"required>
              
             <button class="add-button">Add New Employee</button>
+            <select name="Department Filter" id="Filter" class="Filter">
+                <option value="">All Departments</option>                
+                <option value="Developers">Developers</option>
+                <option value="Operations">Operations</option>
+                <option value="Quality Assurence">Quality Assurence</option>
+                <option value="Human Resources">Human Resources</option>
+            </select>
+            
         </div>
+        
         </form>
-        <ul id="ul">
+       <ul id="ul">
         </ul>
     </div>
     
