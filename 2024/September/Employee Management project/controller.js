@@ -1,7 +1,9 @@
-import { editEmployees, saveChanges, gEmployees } from "./service.js";
+import { editEmployees, saveChanges,} from "./service.js";
 import { utils } from "./utilities.js"
+import { gEmployees } from "./service.js";
+
 // keys
-const employees_key_added = "employeeAdded"
+const employees_key_added = "employees"
 // ID's
 const elForm = document.getElementById("form") //form
 const elUl = document.getElementById("ul") //ul
@@ -12,6 +14,14 @@ const elDate = document.getElementById("input-startDate")
 const elDepartment = document.getElementById("input-Department") 
 const elSalary = document.getElementById("input-salary")
 const elFilterDepartment = document.getElementById("Filter");
+
+function loadEmployees() {
+    const storedEmployees = loadFromStorage(employees_key_added);
+    if (storedEmployees.length > 0) {
+        gEmployees.splice(0, gEmployees.length, ...storedEmployees); // Replace contents of gEmployees
+    }
+renderEmployees()
+}
 //rendering dummy database
 function renderEmployees() {
     
@@ -92,6 +102,7 @@ elForm.addEventListener("submit", function (ev) {
     } else if (ev.target.textContent === "Save") {
         ev.preventDefault();
         saveChanges(elNewLi);
+        utils.saveToStorage()
     }
 });
 
@@ -141,6 +152,11 @@ function filterEmployeesByDepartment(department) {
             });
         }
     });
+}
+
+function loadFromStorage(key) {
+    let storedData = localStorage.getItem(key);
+    return storedData ? JSON.parse(storedData) : []; 
 }
 filterEmployeesByDepartment("")
 renderEmployees()

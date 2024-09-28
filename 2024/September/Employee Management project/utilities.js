@@ -16,7 +16,9 @@ function makeId() {
     localStorage.setItem(key, JSON.stringify(value));
   }
   
-  export const utils = {
+  
+ 
+  export let utils = {
     makeId,
     getFromStorage,
     saveToStorage,
