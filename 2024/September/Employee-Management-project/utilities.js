@@ -1,4 +1,4 @@
-import { gEmployees } from "./service";
+import { gEmployees } from "./service.js";
 function makeId() {
     let id = "";
     const possible =
