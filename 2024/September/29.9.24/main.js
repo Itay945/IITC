@@ -1,5 +1,7 @@
-// const array = [1, 2, 3, 4, 5]
+// https://ta-at-iitc.vercel.app/
 
+// const array = [1, 2, 3, 4, 5]
+const domView = document.getElementById("my-dom")
 // array.forEach(num => {
 //    let number = num * 2
 //     console.log(number);
@@ -47,3 +49,5 @@ array = arr.map(num => {
     return numbers
 })
 console.log(array);
+
+domView.innerHTML = `<p>${array}</p>`
