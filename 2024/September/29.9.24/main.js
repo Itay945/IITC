@@ -146,4 +146,21 @@ const domView = document.getElementById("my-dom")
 // const array = arr.filter(num => num % 2 === 0)
 // console.log(array);
 
-//16fj
+// //16fj
+
+// const arr = [1, 2, 3, 4, 5]
+
+// const sum = arr.reduce((initial, value ) => {
+//      return initial + value
+// },0)    
+// console.log(sum);
+
+
+const arr = [10, 5, 15, 20, 25]
+
+
+const sum = arr.reduce((initial, value ) => {
+    return initial > value ? initial : value
+        
+    })    
+    console.log(sum);
