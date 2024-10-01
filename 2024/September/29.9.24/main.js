@@ -146,4 +146,4 @@ const domView = document.getElementById("my-dom")
 // const array = arr.filter(num => num % 2 === 0)
 // console.log(array);
 
-//16
+//16fj
