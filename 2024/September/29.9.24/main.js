@@ -41,13 +41,49 @@ const domView = document.getElementById("my-dom")
 // })
 // console.log(numbers);
 
+['Hello', ' ', 'World', '!'].
 
-const arr = [1, 2, 3, 4, 5]
+array
 
-array = arr.map(num => {
-    numbers = num * 2
-    return numbers
-})
-console.log(array);
+// const arr = [1, 2, 3, 4, 5]
+
+// array = arr.map(num => {
+//     numbers = num * 2    
+//     return numbers
+// })
+// console.log(array);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 domView.innerHTML = `<p>${array}</p>`
