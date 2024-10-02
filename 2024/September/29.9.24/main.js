@@ -193,6 +193,16 @@ const domView = document.getElementById("my-dom")
 
 
 
-const arr = ['תפוח', 'בננה', 'דובדבן'] 
-const smth = arr.some(num => num.length > 6)
-console.log(smth);
+// const arr = ['תפוח', 'בננה', 'דובדבן'] 
+// const smth = arr.some(num => num.length > 6)
+// console.log(smth);
+
+
+const arr = ['חתול', 'כלב', 'פיל']
+
+const vowels = ['א', 'ה', 'י', 'ו'];
+
+const smth =  arr.some(str => {
+    const smt = str[0]
+    
+})
