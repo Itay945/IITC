@@ -156,11 +156,43 @@ const domView = document.getElementById("my-dom")
 // console.log(sum);
 
 
-const arr = [10, 5, 15, 20, 25]
+// const arr = [10, 5, 15, 20, 25]
 
 
-const sum = arr.reduce((initial, value ) => {
-    return initial > value ? initial : value
+// const sum = arr.reduce((initial, value ) => {
+//     return initial > value ? initial : value
         
-    })    
-    console.log(sum);
+//     })    
+//     console.log(sum);
+
+// const arr = ['שלום', ' ', 'עולם', '!']
+
+// const that  = arr.reduce((initial, value) => {
+// return initial + value
+// })
+// console.log(that);
+
+// const arr = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]              ******************************** need to asnwer
+
+// const count = arr.reduce((initial, value) => {
+// initial[value]
+// })
+
+
+// const arr = [1, 2, 3, 4, 5]
+
+// const smth = arr.some(num => num > 3)
+// console.log(smth);
+
+
+// const arr = [2, 4, 6, 8, 10]
+
+// const smth = arr.every(smth => smth % 2 === 0) 
+
+// console.log(smth);
+
+
+
+const arr = ['תפוח', 'בננה', 'דובדבן'] 
+const smth = arr.some(num => num.length > 6)
+console.log(smth);
