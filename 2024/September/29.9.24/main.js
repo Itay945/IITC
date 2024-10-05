@@ -198,11 +198,191 @@ const domView = document.getElementById("my-dom")
 // console.log(smth);
 
 
-const arr = ['חתול', 'כלב', 'פיל']
+// const arr = ['אדדש', 'גדד', 'א']
+// const vowels = ['א', 'ה', 'י', 'ו'];
 
-const vowels = ['א', 'ה', 'י', 'ו'];
 
-const smth =  arr.some(str => {
-    const smt = str[0]
+// const smth =  arr.every(str => {
     
+//     for (let index = 0; index < vowels.length; index++) {
+//         const vowel = vowels[index]
+//         if (str.startsWith(vowel)) {
+//             return true
+//         } else {
+//             continue
+//         }
+        
+//     }
+
+
+
+// })
+ 
+
+// console.log(smth);
+
+
+// const arr = [false, false, false, true]
+
+// const smth = arr.some(str => {
+//     return str
+// })
+// console.log(smth);
+
+
+// const arr = [1, 2, 3, 4, 5]
+
+// const smth = arr.find(str =>{
+//    const that = str > 3
+//     return that
+// })
+// console.log(smth);
+
+
+// const arr = [1, 3, 5, 2, 4, 6]
+
+// const smth = arr.findIndex(num => {
+//     const that = num % 2 === 0
+//     return that
+    
+    
+// })
+// console.log(smth);
+
+
+// const arr = ['תפוח', 'בננה', 'דובדבן']
+
+// const array = arr.find(str => {
+//    const smth = str.length > 5
+//    return smth
+// })
+// console.log(array);
+
+
+// const arr = ['תפוח', 'בננה', 'דובדבן', 'תמר']
+
+
+// const array = arr.findIndex(str => {
+//    return str === 'דובדבן'
+// }  )
+// console.log(array);
+
+
+// const arr = [1, 2, 3, -4, 5, -6]
+
+// const array = arr.find(num => {
+//     if (Math.sign(num) === -1)
+//     return num
+// })
+// console.log(array);
+
+
+// const arr = [3, 1, 4, 1, 5, 9, 2, 6, 5]
+
+// const array = arr.sort((a, b) => {
+//     return a - b
+// })
+// console.log(array);
+
+
+// const arr = ['בננה', 'דובדבן', 'תפוח', 'תמר']
+
+// const array = arr.sort()
+// console.log(array);
+
+
+// 33
+
+// const arr = [3, 1, 4, 1, 5, 9, 2, 6, 5]
+
+// const array = arr.sort((a,b) => {
+//     return b - a
+// })
+//  console.log(array);
+
+
+// const arr = ['בננה', 'דובדבן', 'תפוח', 'תמר', 'קמהקהקהמקהמ'] 
+
+// const array = arr.sort((a,b) => {
+// return    a.length - b.length
+// })
+// console.log(array);
+
+// const arr = [{name: 'יוחנן', age: 25}, 
+// {name: 'יעל', age: 30}, 
+// {name: 'בועז', age: 20}]
+
+// const array = arr.sort((a,b) => {
+//    return a.age - b.age
+// })
+// console.log(array);
+
+
+// const arr = [1, [2, 3], [4, [5, 6]]]
+
+// const array = arr.flat(2)
+
+// console.log(array);
+
+// const arr = [1, [2, [3, [4]]]]
+
+// const array = arr.flat(2)
+// console.log(array);
+
+
+
+// const arr = [1, 2, , 4, 5]
+
+
+// const array = arr.flat(1)
+
+
+// console.log(array);
+// console.log(arr);
+
+
+// const arr = ['א', ['ב', 'ג'], 'ד']
+
+// const array = arr.flat(1)
+
+// console.log(array);
+
+
+// const arr = [1, [2, [3, [4, [5]]]]]
+
+// const array = arr.flat(Infinity)
+
+// console.log(array);
+
+// const arr = ['א', 'ב', 'ג', 'ד']
+// const array = arr.forEach((str, index) => {
+    
+//    return console.log(str, index)
+    
+// })
+
+// const arr = [10, 20, 30, 40]
+
+// const array = arr.map((num, index) => {
+//     const obj = {}
+//     obj.number = num
+//     obj.index = index
+//     return obj
+  
+// })
+// console.log(array);
+
+
+// const arr = ['תפוח', 'בננה', 'אבטיח', 'תמר']
+
+// const array = arr.filter(str => str.includes("א"))
+// console.log(array);
+
+
+const arr = ['א', 'ב', 'א', 'ג', 'ב', 'א']
+
+const array = arr.reduce((initial, value) => {
+const obj = {}
+    obj.key = value
+    obj.key
 })
