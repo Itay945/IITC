@@ -89,8 +89,10 @@
 
 //     elbuttonwrapper.appendChild(elButtonWithdraw);
 //     elbuttonwrapper.appendChild(elButtonDeposit);
-// }
+// } // original code
 
+
+// help from sources
 let elInput = document.querySelector("input");
 let elBtn = document.querySelector("button[type='submit']");
 const elForm = document.querySelector("form");
