@@ -1,0 +1,99 @@
+* {
+box-sizing: border-box;
+}
+@font-face {
+    font-family:overpass ;
+    src: url(./fonts/Overpass/Overpass-VariableFont_wght.ttf);
+}
+html {
+   font-family: overpass;
+   
+}
+body {
+    background-color: hsl(216, 12%, 8%);
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.container {
+    height: 310px;
+    width: 320px;
+    padding: 20px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(213, 19%, 18%);
+    border-radius: 15px
+}
+
+.hidden {
+    display: none;
+}
+
+.submit-button {
+    /* margin-top: 15px; */
+    /* width: 80%; */
+    height: 36px;
+    border-radius: 20px;
+    border: none;
+    background-color: hsl(25, 97%, 53%);
+    margin-top: 22px;
+    width: 90%;
+    
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing:1px ;
+    cursor: pointer;
+}
+.ratings {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 18px;
+}
+.feedback {
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+    
+    padding: 5px;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+h1 {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 700;
+}
+.dot {
+     height: 29px;
+     width: 29px;
+     background-color: hsl(213, 21%, 23%);
+     border-radius: 50%;
+     display: inline-block;
+     justify-items: center;
+     padding-top: 9px;
+     font-size: 10px;
+}
+
+.star-container {
+    height: 29px;
+     width: 29px;
+     background-color: hsl(213, 21%, 23%);
+     border-radius: 50%;
+     display: inline-block;
+     justify-items: center;
+     padding-top: 8px;
+     font-size: 10px;
+     
+}
