@@ -40,40 +40,41 @@
 // }
 // smth(dpMsg,"LIAV")
 //https://github.com/public-apis/public-apis
-const imgDiv = document.querySelector(".imageDiv");
+// const imgDiv = document.querySelector(".imageDiv");
 
 
-let smth = fetch("https://dog.ceo/api/breeds/image/random")
-.then(response => response.json())
-.then(data => {
+// let smth = fetch("https://dog.ceo/api/breeds/image/random")
+// .then(response => response.json())
+// .then(data => {
+//     console.log(data);
     
-    insertImage(data.message);
-});
+//     insertImage(data.message);
+// });
 
-function insertImage(src) {
-    imgDiv.insertAdjacentHTML("afterbegin", `
-        <img src="${src}" alt="Dog Image">
-        `);
-    }
-    insertImage(smth);
-
-
+// function insertImage(src) {
+//     imgDiv.insertAdjacentHTML("afterbegin", `
+//         <img src="${src}" alt="Dog Image">
+//         `);
+//     }
+//     insertImage(smth);
+    
+    
 
 
 
 const cats = document.querySelector(".cat-fact");
 
 
-let that = fetch("https://cat-fact.herokuapp.com/fact")
+let that = fetch("https://api.thecatapi.com/v1/images/search")
 .then(response => response.json())
 .then(data => {
-    
-    insertImage(data.message);
+    dataObj = data[0]
+    insertImage(dataObj.url);
 });
 
 function insertImage(src) {
-    imgDiv.insertAdjacentHTML("afterbegin", `
-        <p src="${src}">
+    cats.insertAdjacentHTML("afterbegin", `
+        <img src="${src}" alt="cat Image">
         `);
     }
-    insertImage(smth);
+    insertImage(that);
