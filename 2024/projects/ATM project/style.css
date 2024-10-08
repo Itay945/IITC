@@ -73,3 +73,15 @@ input {
     
     border-radius: 4px;
 }
+
+
+.deposit-submit {
+    width: 140px;
+    padding: 7px;
+    margin-bottom: 4px;
+    padding-top: 7px;
+    
+    border-radius: 2px;
+    border: none 1px;
+    background-color: rgba(141, 115, 236, 0.61);
+}

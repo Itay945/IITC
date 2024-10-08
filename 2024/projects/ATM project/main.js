@@ -92,7 +92,7 @@
 // } // original code
 
 
-// help from sources
+// i used a lot of help to get the rest of the code to work the way i wanted
 let elInput = document.querySelector("input");
 let elBtn = document.querySelector("button[type='submit']");
 const elForm = document.querySelector("form");
@@ -168,7 +168,7 @@ function renderButtons() {
                 if (isNaN(withdrawalAmount) || withdrawalAmount <= 0) {
                     alert("Please enter a valid amount to withdraw.");
                 } else if (withdrawalAmount > balance) {
-                    alert("Insufficient funds. Your current balance is " + balance + "$.");
+                    alert(`Insufficient funds. Your current balance is " + balance + "$.`);
                 } else {
                     balance -= withdrawalAmount; 
                     elBalance.textContent = `Current Balance: ${balance}$`; 
