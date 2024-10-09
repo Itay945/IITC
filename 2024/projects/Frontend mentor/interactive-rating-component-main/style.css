@@ -51,6 +51,9 @@ body {
     letter-spacing:1px ;
     cursor: pointer;
 }
+.submit-button:hover {
+    background-color: white;
+}
 .ratings {
     margin-top: 15px;
     display: flex;
@@ -76,14 +79,18 @@ h1 {
     font-weight: 700;
 }
 .dot {
-     height: 29px;
-     width: 29px;
+     height: 38px;
+     width: 38px;
      background-color: hsl(213, 21%, 23%);
      border-radius: 50%;
      display: inline-block;
      justify-items: center;
-     padding-top: 9px;
+     padding-top: 13px;
      font-size: 10px;
+}
+.dot:hover {
+background-color: white;
+color: black;
 }
 
 .star-container {
@@ -107,7 +114,7 @@ img {
 }
 
 .active {
-    background-color: white;
+    background-color: hsl(25, 97%, 53%);
     color: black;
 }
 
