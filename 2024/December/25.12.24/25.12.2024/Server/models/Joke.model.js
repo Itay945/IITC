@@ -20,6 +20,11 @@ const jokeSchema = new mongoose.Schema({
     type: Date,
     default: Date.now, // Automatically set the current date
   },
+  userId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User", // Reference the 'User' model
+    required: true, // Ensure a joke is always associated with a user
+  },
 });
 
-module.exports = mongoose.model('Joke', jokeSchema);
+module.exports = mongoose.model("Joke", jokeSchema);

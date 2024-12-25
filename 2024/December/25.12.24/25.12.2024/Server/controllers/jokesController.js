@@ -37,6 +37,12 @@ const getJokeById = async (req, res) => {
 const updateJoke = async (req, res) => {
   try {
     const { id } = req.params;
+
+    //Validate the request body
+    if (!req.body.setup) {
+      throw new Error("You must provide a punchline");
+    }
+
     const joke = await Joke.findByIdAndUpdate(id, req.body, { new: true });
 
     if (!joke) throw new Error("Joke not found");
@@ -76,10 +82,10 @@ const getRandomJoke = async (req, res) => {
 };
 
 module.exports = {
-    getAllJokes,
-    createJoke,
-    getJokeById,
-    updateJoke,
-    deleteJoke,
-    getRandomJoke
-}
+  getAllJokes,
+  createJoke,
+  getJokeById,
+  updateJoke,
+  deleteJoke,
+  getRandomJoke,
+};
