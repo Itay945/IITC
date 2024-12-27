@@ -11,8 +11,10 @@ const getAllJokes = async (req, res) => {
 
 const createJoke = async (req, res) => {
   try {
-    console.log(req.body);
-    const result = await Joke.create(req.body);
+    const { userId } = req.params;
+    const joke = { ...req.body, author: userId };
+
+    const result = await Joke.create(joke);
     console.log(result);
 
     res.status(201).json(result);
@@ -45,7 +47,7 @@ const getJokeByAuthorId = async (req, res) => {
   } catch (error) {
     res.status(500).send(error.message);
   }
-} 
+};
 
 const updateJoke = async (req, res) => {
   try {
@@ -56,7 +58,7 @@ const updateJoke = async (req, res) => {
       throw new Error("You must provide a setup");
     }
 
-    if (!req.body.punchiline) {
+    if (!req.body.punchline) {
       throw new Error("You must provide a punchline");
     }
 
@@ -99,11 +101,11 @@ const getRandomJoke = async (req, res) => {
 };
 
 module.exports = {
-    getAllJokes,
-    createJoke,
-    getJokeById,
-    updateJoke,
-    deleteJoke,
-    getRandomJoke,
-    getJokeByAuthorId
-}
+  getAllJokes,
+  createJoke,
+  getJokeById,
+  updateJoke,
+  deleteJoke,
+  getRandomJoke,
+  getJokeByAuthorId,
+};
