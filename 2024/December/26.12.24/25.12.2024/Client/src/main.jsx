@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import axios from "axios";
-import "./App.css";
 import RandomJoke from "./Components/RandomJokes.jsx";
 import JokesList from "./Components/JokesList.jsx";
-
+import "./main.css"
 function Main() {
   const [joke, setJoke] = useState("");
   const [jokes, setJokes] = useState([]);
@@ -25,10 +24,12 @@ function Main() {
   }, []);
 
   return (
-    <div>
+    <>
+    <div className="mainContainer">
       <RandomJoke joke={joke} fetchJoke={fetchJoke} />
       <JokesList jokes={jokes} />
     </div>
+    </>
   );
 }
 
