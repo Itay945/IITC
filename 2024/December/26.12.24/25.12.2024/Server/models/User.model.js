@@ -15,7 +15,12 @@ const userSchema = new mongoose.Schema({
   },
   createdAt: {
     type: Date,
-    default: Date.now, // Automatically set the current date
+    default: Date.now, 
+  },
+  status: {
+    type: String,
+    enum: ['active', 'inactive'], 
+    default: 'active',           
   },
 });
 

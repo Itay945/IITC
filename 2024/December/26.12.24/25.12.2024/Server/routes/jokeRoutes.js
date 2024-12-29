@@ -7,6 +7,7 @@ const {
   deleteJoke,
   getRandomJoke,
   getJokeByAuthorId,
+  likeJoke,
 } = require("../controllers/jokesController.js");
 
 const router = express.Router();
@@ -39,4 +40,7 @@ router.put("/:id", updateJoke);
 
 router.delete("/:id", deleteJoke);
 
+//Update likes
+
+router.put("/:id/like", likeJoke);
 module.exports = router;

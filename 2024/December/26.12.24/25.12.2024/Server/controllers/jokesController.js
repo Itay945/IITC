@@ -11,6 +11,8 @@ const getAllJokes = async (req, res) => {
 
 const createJoke = async (req, res) => {
   try {
+    console.log(req.body);
+    
     const { userId } = req.params;
     const joke = { ...req.body, author: userId };
 
@@ -100,6 +102,26 @@ const getRandomJoke = async (req, res) => {
   }
 };
 
+const likeJoke = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    // Find the joke by ID and increment the likes
+    const joke = await Joke.findById(id);
+    if (!joke) {
+      return res.status(404).json({ message: "Joke not found" });
+    }
+
+    joke.likes += 1;  // Increment the likes count
+    const updatedJoke = await joke.save();  // Save the updated joke
+
+    res.status(200).json(updatedJoke);  // Send back the updated joke data
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
+};
+
+
 module.exports = {
   getAllJokes,
   createJoke,
@@ -108,4 +130,5 @@ module.exports = {
   deleteJoke,
   getRandomJoke,
   getJokeByAuthorId,
+  likeJoke,
 };

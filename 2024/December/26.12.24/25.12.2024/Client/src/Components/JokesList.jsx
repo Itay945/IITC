@@ -1,11 +1,24 @@
-function JokesList({ jokes }) {
+function JokesList({ jokes, deleteJoke, likeJoke, editJoke }) {
   return (
-    <div>
+    <div className="jokes-container">
       {jokes.map((joke) => (
-        <div key={joke._id}>
+        <div className="joke-card" key={joke._id}>
           <h6>{joke.setup}</h6>
           <p>{joke.punchline}</p>
-          <span>{joke._id}</span>
+          <p>Likes: {joke.likes}</p>
+          <span>Joke ID: {joke._id}</span>
+          <button
+            className="delete-button"
+            onClick={() => deleteJoke(joke._id)}
+          >
+            Delete Joke
+          </button>
+          <button
+            className="like-button"
+            onClick={() => likeJoke(joke._id)}
+          >
+            Like
+          </button>
         </div>
       ))}
     </div>
