@@ -1,17 +1,10 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
 import { Task } from "../App";
 
-export default function TaskTable() {
-  const [tasks, setTasks] = useState<Task[]>([]);
-  useEffect(() => {
-    async function fetchTasks() {
-      const res = await axios.get("http://localhost:3000/tasks");
-      setTasks(res.data);
-    }
-    fetchTasks();
-  }, []);
+interface TaskTableProps {
+  tasks: Task[];
+}
 
+export default function TaskTable({ tasks }: TaskTableProps) {
   return (
     <div className="p-4">
       <table className="table-auto border-collapse border border-gray-300 w-full">
