@@ -15,7 +15,7 @@ export default function CreateTaskButton({ tasks, setTasks }: { tasks: Task[]; s
     // Create a new task object with a unique ID
     const taskWithId = {
       ...newTask, // takes all the previous parts of the object and adding the dynamic ID later
-      id: tasks.length > 0 ? tasks[tasks.length - 1].id + 1 : 1,
+      id: tasks.length > 0 ? Number(tasks[tasks.length - 1].id) + 1 : 1,
     };
 
     axios

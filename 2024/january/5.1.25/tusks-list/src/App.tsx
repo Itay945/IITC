@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import axios from "axios"; // Make sure axios is imported
+import axios from "axios";
 import CreateTaskButton from "./components/create-task-button";
 import TaskTable from "./components/task-table";
 

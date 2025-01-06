@@ -79,22 +79,6 @@
       "dueDate": "2025-01-15",
       "priority": "Medium",
       "status": "In Progress"
-    },
-    {
-      "id": "101",
-      "title": "ttkktktktkt",
-      "description": "ttktktktktktk",
-      "dueDate": "1111-11-11",
-      "priority": "Low",
-      "status": "Pending"
-    },
-    {
-      "id": "1011",
-      "title": "hihi ",
-      "description": "hihi ",
-      "dueDate": "2222-02-22",
-      "priority": "Low",
-      "status": "Pending"
     }
   ]
 }
