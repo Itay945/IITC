@@ -1,28 +1,16 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Task } from "../App";
 
-type task = {
-  id: number; 
-  title: string; 
-  description: string; 
-  dueDate: string; 
-  priority: "Low" | "Medium" | "High"; 
-  status: "Pending" | "In Progress" | "Completed";
-};
-
-
-export default function taskTable() {
-  
-  const [tasks, setTasks] = useState<task[]>([])
+export default function TaskTable() {
+  const [tasks, setTasks] = useState<Task[]>([]);
   useEffect(() => {
-
     async function fetchTasks() {
       const res = await axios.get("http://localhost:3000/tasks");
       setTasks(res.data);
     }
-    fetchTasks()
-  }, [])
-
+    fetchTasks();
+  }, []);
 
   return (
     <div className="p-4">
@@ -51,7 +39,5 @@ export default function taskTable() {
         </tbody>
       </table>
     </div>
-  )
+  );
 }
-
- 
